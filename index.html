@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+  <head>
+    <title>JS Practice</title>
+  </head>
+  <h2>JavaScript Practice</h2>
+  <h4>Ex. 1</h4>
+
+  <p id="demom"></p>
+
+  <script>
+    const d = new Date();
+    document.getElementById("demom").innerHTML = d;
+  </script>
+
+
+
+  <form>
+    1st Number : <input type="text" id="fn" /><br>
+    2nd Number: <input type="text" id="sn" /><br>
+
+    <input type="button" onClick="multiplyBy()" Value="Multiply" />
+    <input type="button" onClick="divideBy()" Value="Divide" />
+  </form>
+
+  <p>The Result is : <br>
+    <span id="result"></span>
+  </p>
+
+  <script type="text/javascript">
+    function multiplyBy() {
+      num1 = document.getElementById("fn").value;
+      num2 = document.getElementById("sn").value;
+      document.getElementById("result").innerHTML = num1 * num2;
+    }
+
+    function divideBy() {
+      num1 = document.getElementById("fn").value;
+      num2 = document.getElementById("sn").value;
+      document.getElementById("result").innerHTML = num1 / num2;
+    }
+  </script>
+
+  <p id="demo"></p>
+
+  <script type="text/javascript">
+    let text = "NAME os the student: Berikova Malika. GROUP: CS-2121N.";
+    document.getElementById("demo").innerHTML = text;
+  </script>
+
+
+
+  <script>
+    var countDownDate = new Date("Jun 26, 2024 00:00:00").getTime();
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("tillEnd").innerHTML = days + "d " + hours + "h " +
+        minutes + "m " + seconds + "s " + "-----> TILL THE END OF THE UNIVERSITY!!!";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("tillEnd").innerHTML = "IT ENDED!";
+      }
+    }, 1000);
+  </script>
+
+  <p id="tillEnd"></p>
+
+</body>
+
+</html>
